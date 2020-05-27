@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "username": "AAA",
+    "master": "0"
+  },
+  {
+    "id": "2",
+    "username": "BBB",
+    "master": "1"
+  },
+  {
+    "id": "3",
+    "username": "CCC",
+    "master": "1"
+  },
+  {
+    "id": "4",
+    "username": "DDD",
+    "master": "1"
+  },
+  {
+    "id": "5",
+    "username": "EEE",
+    "master": "2"
+  },
+  {
+    "id": "6",
+    "username": "FFF",
+    "master": "2"
+  },
+  {
+    "id": "7",
+    "username": "GGG",
+    "master": "3"
+  },
+  {
+    "id": "8",
+    "username": "HHH",
+    "master": "3"
+  },
+  {
+    "id": "9",
+    "username": "GGG",
+    "master": "4"
+  },
+  {
+    "id": "10",
+    "username": "HHH",
+    "master": "4"
+  }
+]

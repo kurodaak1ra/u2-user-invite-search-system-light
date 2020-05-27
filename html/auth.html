@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/ico" href="/img/favicon.ico">
+  <meta name="theme-color" content="#60b7ff">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/css/common.min.css">
+  <link rel="stylesheet" href="/css/auth.min.css">
+  <title>U2 邀请树查询系统 - Auth</title>
+</head>
+
+<body>
+  <div class="auth">
+    <div class="auth-inner inner">
+      <form class="content" action="" method="POST">
+        <p>U2 邀请查询系统</p>
+        <p class="tips">请填写完整</p>
+        <div class="uid">
+          <input class="uid-ipt" type="text" name="uid" placeholder="请输入 UID">
+        </div>
+        <div class="username">
+          <input type="text" name="username" placeholder="请输入用户名">
+        </div>
+        <div class="submit">
+          <input type="submit" value="auth">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script src="/js/tools.js"></script>
+<script>
+  // limit uid input
+  $('input[name="uid"]').on('input', function () {
+    let split = this.value.split('')
+    if (!/[0-9]/.test(split[split.length-1])) this.value = this.value.replace(split[split.length-1], "")
+    if (this.value.length > 5) this.value = this.value.slice(0, 5)
+  })
+
+  // auth
+  $('.auth input').forEach(el => el.on('focus', function () {
+    $('.auth .tips').css('opacity', '0')
+  }))
+  $('.auth .submit').on('click', function (e) {
+    $('.auth input').forEach(el => {
+      if (el.value == '') {
+        $('.auth .tips').css('opacity', '1')
+        e.preventDefault()
+        return
+      }
+    })
+  })
+
+  if ({{ . }} != '') alert({{ . }})
+</script>
+
+</html>

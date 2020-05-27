@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/ico" href="http://u2.dmhy.org/favicon.ico">
+  <meta name="theme-color" content="#60b7ff">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/css/common.min.css">
+  <link rel="stylesheet" href="/css/panel.min.css">
+  <title>U2 邀请树查询</title>
+</head>
+
+<body>
+  <!-- app -->
+  <div class="app">
+    <div class="menu-entrance" onclick="show('.menu');">
+      <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1102">
+        <path
+          d="M597.82 201.84m15.43 0l239.14 0q15.43 0 15.43 15.43l0 237.29q0 15.43-15.43 15.43l-239.14 0q-15.43 0-15.43-15.43l0-237.29q0-15.43 15.43-15.43Z"
+          fill="#BAD4FF" p-id="1103"></path>
+        <path
+          d="M838.62 484.75h-260.1A40.77 40.77 0 0 1 537.81 444V183.92a40.77 40.77 0 0 1 40.71-40.73h260.1a40.78 40.78 0 0 1 40.72 40.73V444a40.78 40.78 0 0 1-40.72 40.75z m-260.1-314a13.17 13.17 0 0 0-13.15 13.17V444a13.16 13.16 0 0 0 13.15 13.16h260.1A13.16 13.16 0 0 0 851.77 444V183.92a13.16 13.16 0 0 0-13.15-13.17zM838.62 880.44h-260.1a40.74 40.74 0 0 1-40.71-40.7v-260.1a40.77 40.77 0 0 1 40.71-40.73h260.1a40.78 40.78 0 0 1 40.72 40.73v260.1a40.75 40.75 0 0 1-40.72 40.7z m-260.1-314a13.16 13.16 0 0 0-13.15 13.16v260.1a13.16 13.16 0 0 0 13.15 13.14h260.1a13.16 13.16 0 0 0 13.15-13.14V579.64a13.16 13.16 0 0 0-13.15-13.16zM444.08 880.44H184a40.74 40.74 0 0 1-40.71-40.7v-260.1A40.77 40.77 0 0 1 184 538.91h260.1a40.78 40.78 0 0 1 40.72 40.73v260.1a40.75 40.75 0 0 1-40.74 40.7zM184 566.48a13.16 13.16 0 0 0-13.15 13.16v260.1A13.16 13.16 0 0 0 184 852.88h260.1a13.16 13.16 0 0 0 13.15-13.14v-260.1a13.16 13.16 0 0 0-13.15-13.16zM313.8 144.67c-71.87 0-133.37 45.17-157.64 108.6a14.36 14.36 0 0 0 13.45 19.42 14.36 14.36 0 0 0 13.39-9.21 140.2 140.2 0 0 1 130.3-90.08c76.73-0.25 139.84 62.13 140.44 138.86 0.6 77.68-62.41 141.1-140 141.1-60.12 0-111.51-38.12-131.29-91.45a14.27 14.27 0 0 0-13.41-9.22A14.36 14.36 0 0 0 155.61 372c23.87 64.21 85.77 110.08 158.19 110.08 93 0 168.69-75.69 168.69-168.72S406.81 144.67 313.8 144.67z"
+          fill="#3585F9" p-id="1104"></path>
+      </svg>
+    </div>
+    <div class="menu">
+      <div class="menu-close" onclick="hide('.menu');">
+        <svg class="icon" style="fill: #fff;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="1153">
+          <path
+            d="M756.736 812.032L512 567.296 267.776 811.52c-12.8 12.8-28.672 7.168-45.568-9.728-16.896-16.896-23.04-32.768-9.728-45.568L456.704 512 211.968 267.264c-14.848-15.36-6.144-30.208 8.704-45.568 16.896-16.896 30.72-25.6 46.592-10.24L512 456.704 756.736 212.48c14.336-14.336 28.672-7.168 47.104 11.264 15.36 15.36 23.552 28.672 8.192 44.032L567.296 512 811.52 756.224c15.36 15.36 8.704 28.672-8.192 46.08-16.896 17.408-33.792 22.528-46.592 9.728z"
+            p-id="1154"></path>
+        </svg>
+      </div>
+      <p class="title">&nbsp;</p>
+      <div class="menu-list">
+        <form method="post" action="">
+          <div class="ipt">
+            <input name="uid" type="text" placeholder="请输入 UID" maxlength="5">
+          </div>
+          <div class="self">
+            <input type="button" name="submit" value="self">
+          </div>
+          <div class="owner">
+            <input type="button" name="submit" value="owner">
+          </div>
+          <div class="family">
+            <input type="button" name="submit" value="family">
+          </div>
+        </form>
+        <div onclick="show('.about')">关于</div>
+      </div>
+    </div>
+    <div class="chart"></div>
+  </div>
+
+  <!-- about -->
+  <div class="about">
+    <div class="about-inner inner">
+      <div class="content">
+        <p>本系统仅供 U2 用户查询使用</p>
+        <p>此版本为 Golang 轻量重制版</p>
+        <p>参与本系统开发[PHP版] (排名不分先后) ：</p>
+        <p><a target="_blank" href="https://u2.dmhy.org/userdetails.php?id=45735">graydove</a></p>
+        <p><a target="_blank" href="https://u2.dmhy.org/userdetails.php?id=46657">KurodaAkira</a></p>
+        <p><a target="_blank" href="https://u2.dmhy.org/userdetails.php?id=46808">DeveloperHZH</a></p>
+        <p>主贴：<a href="https://u2.dmhy.org/forums.php?action=viewtopic&forumid=7&topicid=11127">点我跳转</a></p>
+        <p>使用方法：<a href="https://u2.dmhy.org/forums.php?action=viewtopic&forumid=7&topicid=11145">点我跳转</a></p>
+        <p>注意：当您设置了高隐私时，则只允许以 UID 的方式进行查询，如果您没有邀请过任何人，则您将查询不到关于您的任何信息</p>
+        <ul onclick="hide('.about')">
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="/js/echarts.min.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/panel.js"></script>
+<script>
+  console = Notification
+  window.onload = function () {
+    const data = JSON.parse({{ . }})
+
+    $('.menu input[type="text"]').on('input', function () {
+      let split = this.value.split('')
+      if (!/[0-9]/.test(split[split.length - 1])) this.value = this.value.replace(split[split.length - 1], "")
+      if (this.value.length > 5) this.value = this.value.slice(0, 5)
+    })
+
+    // 
+    $('.self').on('click', function() {
+      hide('.menu')
+      let uid = $('.menu input[type="text"]').value
+      if (uid == '') {
+        alert('请填写 UID')
+        return
+      }
+      if (data[uid] == undefined) {
+        alert("未查询到目标用户")
+        return
+      }
+      chartInit(recursive(uid, data), data[uid].username)
+    })
+
+    // 
+    $('.owner').on('click', function () {
+      hide('.menu')
+      let uid = $('.menu input[type="text"]').value
+      if (uid == '') {
+        alert('请填写 UID')
+        return
+      }
+      let master = data[uid].master
+      if (master == 0) {
+        master = uid
+      }
+      if (data[master] == undefined) {
+        alert("未查询到目标用户")
+        return
+      }
+      chartInit(recursive(master, data), data[uid].username)
+    })
+
+    //
+    $('.family').on('click', function () {
+      hide('.menu')
+      let uid = $('.menu input[type="text"]').value
+      if (uid == '') {
+        alert('请填写 UID')
+        return
+      }
+      let master = null
+      const doop = function (uid) {
+        if (data[uid].master != "0") {
+          doop(data[uid].master)
+        } else {
+          master = uid
+        }
+      }
+      doop(uid)
+      if (data[master] == undefined) {
+        alert("未查询到目标用户")
+        return
+      }
+      chartInit(recursive(master, data), data[uid].username)
+    })
+  }
+</script>
+
+</html>

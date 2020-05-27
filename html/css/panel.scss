@@ -1,0 +1,173 @@
+.target {
+  fill: #60b7ff;
+  animation: shake 1s infinite steps(1, start);
+}
+@keyframes shake {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+  .menu-entrance {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 1em;
+    left: 2em;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .menu {
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: 1;
+    padding: 0px 80px;
+    transition: all 200ms;
+    background: rgba(0, 0, 0, 0.6);
+    .title {
+      color: #60b7ff;
+      text-align: center;
+      font-size: 2em;
+      margin: 0.8em 0;
+    }
+    .menu-close {
+      width: 2em;
+      height: 2em;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      cursor: pointer;
+    }
+    .menu-list {
+      color: #fff;
+      div {
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 20px;
+        background: #60b7ff;
+        cursor: pointer;
+        input {
+          color: #fff;
+          text-indent: 0.7em;
+        }
+        input::placeholder {
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      .self, .owner, .family {
+        position: relative;
+        input {
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+      .self::before {
+        content: "查询自家树";
+      }
+      .owner::before {
+        content: "查询本家树";
+      }
+      .family::before {
+        content: "查询家族树"
+      }
+      .self::before, .owner::before, .family::before {
+        display: block;
+        width: 100%;
+        line-height: 38px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.about {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  .about-inner {
+    display: table-cell;
+    vertical-align: middle;
+    .content {
+      max-width: 400px;
+      position: relative;
+      padding: 0.5em 1em 1em 1em;
+      width: 80%;
+      line-height: 2em;
+      margin: 0 auto;
+      border-radius: 8px;
+      background: #fff;
+      p:first-child {
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0.6em 0;
+        line-height: 1.3em;
+      }
+      p {
+        span {
+          color: #e54d26;
+        }
+        a {
+          color: #e54d26;
+          text-decoration: none;
+          padding-bottom: 0.1em;
+          border-bottom: 1px solid #e54d26;
+        }
+      }
+      ul {
+        position: absolute;
+        left: 50%;
+        bottom: -3.5em;
+        margin-left: -1.4em;
+        width: 2.8em;
+        height: 2.8em;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        transform: rotate(45deg);
+        li {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -1px;
+          margin-left: -1em;
+          width: 2em;
+          height: 2px;
+          background: #fff;
+        }
+        li:last-child {
+          width: 2px;
+          height: 2em;
+          margin-top: -1em;
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+}
